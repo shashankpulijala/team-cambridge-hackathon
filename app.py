@@ -38,7 +38,7 @@ async def parse_file(file_name):
 
     if response is None:
         logging.error("No response received from the parser agent.")
-        return jsonify( "Pre-commutation pension"), 500
+        return jsonify( "You can opt for the basic pension plan."), 500
     else:
         return (response)
 
