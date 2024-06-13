@@ -10,7 +10,7 @@ premium_address = 'agent1qdj0qess34rgraz2w40qa2xa7wggvvw4gmnqh09cff4kkgj9zme8gl8
 class Message(Model):
     message: str
 
-openai.api_key = 'sk-proj-GRDjhCH5HEgVBCxMYmiVT3BlbkFJEpsCezMzvhKU13Nm6aIm'
+openai.api_key = '###'
 
 rules = Agent(name="rules", seed="khljghfgfd",port = 5002, endpoint = ['http://localhost:5002/submit'])
 
