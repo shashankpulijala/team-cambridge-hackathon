@@ -1,0 +1,151 @@
+Sentence,GeneratedCondition,IfElseStatement,FormattedCondition
+- **Full Scheme Name:** Example Pension Scheme (EPS) Pension Fund - **Scheme Established:** 1 May 1974 - **Contracted Out:** Yes - **Contracted Out Ended:** 30 April 2003 (when accrual ceased) - **Post 5 April 1997 Basis:** Reference Scheme Test - **Equalisation Date:** Scheme 1 - 1 November 1993,"If the pension scheme is contracted out and the contracted out ended date is on or after 30 April 2003, the insurance quote will be affected.","```python
+if pension_scheme == ""contracted out"" and contracted_out_ended_date >= ""2003-04-30"":
+    
+    insurance_quote_affected = True
+else:
+    
+    insurance_quote_affected = False
+```","```python
+if pension_scheme == ""contracted out"" and contracted_out_ended_date >= ""2003-04-30"":
+    
+    insurance_quote_affected = True
+else:
+    
+    insurance_quote_affected = False
+```"
+"- **Term:** Frequency Of Payment - **Status:** Pensioner - **Definition:** Monthly, except member 2752 – please assume annually, next payment 27 March 2023","If the frequency of payment is monthly and the status is pensioner, then the insurance quote will be based on the assumption of annual payments, with the next payment due on 27 March 2023.","if frequency == ""monthly"" and status == ""pensioner"":
+    
+    insurance_quote = ""based on the assumption of annual payments, with the next payment due on 27 March 2023""
+else:
+    
+    insurance_quote = ""standard insurance quote""","if frequency == ""monthly"" and status == ""pensioner"":
+    
+    insurance_quote = ""based on the assumption of annual payments, with the next payment due on 27 March 2023""
+else:
+    
+    insurance_quote = ""standard insurance quote"""
+"- **Term:** Normal Retirement Date (“NRD”) - **Status:** Deferred - **Definition:** The Normal Retirement Dates are shown in the data and were calculated as follows: The member's 60th birthday, if the period between date of joining the company and age 60 would be at least 30 years; or the date between the member’s 60th and 65th birthday, when the period between date of joining the company and the relevant date would be 30 years; or if the period between date of joining the company and the member’s 65th birthday would be less than 30 years, the Normal Retirement Date would be age 65.","If the individual's Normal Retirement Date is deferred and falls within the criteria specified in the definition, then the insurance quote will be provided.","```python
+if normal_retirement_date_deferred and falls_within_criteria:
+    
+    provide_insurance_quote()
+else:
+    
+    do_not_provide_insurance_quote()
+```","```python
+if normal_retirement_date_deferred and falls_within_criteria:
+    
+    provide_insurance_quote()
+else:
+    
+    do_not_provide_insurance_quote()
+```"
+- **Tranche:** Pre 6/4/1988 GMP - **Status:** Deferred - **Definition:** Fixed Rate Revaluation,"If the Tranche is Pre 6/4/1988 GMP and the Status is Deferred with a Definition of Fixed Rate Revaluation, then provide an insurance quote.","if Tranche == ""Pre 6/4/1988 GMP"" and Status == ""Deferred"" and Definition == ""Fixed Rate Revaluation"":
+    
+    provide_insurance_quote()
+else:
+    
+    print(""Insurance quote not available for this Tranche and Status."")","if Tranche == ""Pre 6/4/1988 GMP"" and Status == ""Deferred"" and Definition == ""Fixed Rate Revaluation"":
+    
+    provide_insurance_quote()
+else:
+    
+    print(""Insurance quote not available for this Tranche and Status."")"
+- **Tranche:** Pre 6/4/1988 GMP - **Status:** Pensioner - **Definition:** Fixed 7.5%,"If the Tranche is Pre 6/4/1988 GMP, the Status is Pensioner, and the Definition is Fixed 7.5%, then the insurance quote can be provided.","if Tranche == ""Pre 6/4/1988 GMP"" and Status == ""Pensioner"" and Definition == ""Fixed 7.5%"":
+    
+    print(""Insurance quote can be provided"")
+else:
+    
+    print(""Insurance quote cannot be provided"")","if Tranche == ""Pre 6/4/1988 GMP"" and Status == ""Pensioner"" and Definition == ""Fixed 7.5%"":
+    
+    print(""Insurance quote can be provided"")
+else:
+    
+    print(""Insurance quote cannot be provided"")"
+- **Term:** Widow/Widower’s Pension - **Status:** Deferred - **Definition:** For the purpose of the quotation please assume 50% of pension at DOL revalued to the member’s date of death,"If the applicant is a widow or widower with a deferred pension status, the insurance quote will be based on the assumption that 50% of the pension at the Date of Loss will be revalued to the member's date of death.","```python
+if applicant_status == ""widow"" or applicant_status == ""widower"":
+    
+    if pension_status == ""deferred"":
+    
+        insurance_quote = 0.5 * pension_amount
+   
+else:
+    
+        insurance_quote = ""Unable to provide insurance quote""
+else:
+    
+    insurance_quote = ""Unable to provide insurance quote""
+```","```python
+if applicant_status == ""widow"" or applicant_status == ""widower"":
+    
+    if pension_status == ""deferred"":
+    
+        insurance_quote = 0.5 * pension_amount
+   
+else:
+    
+        insurance_quote = ""Unable to provide insurance quote""
+else:
+    
+    insurance_quote = ""Unable to provide insurance quote""
+```"
+"- **Term:** Qualifying Spouse’s Pension - **Status:** Pensioner - **Definition:** 50% of member’s pre-commutation pension, i.e.","If the individual is a pensioner with a qualifying spouse's pension that equals 50% of the member's pre-commutation pension, then they may be eligible for a specific insurance quote.","```python
+if pensioner and qualifying_spouse_pension == 0.5 * member_pre_commutation_pension:
+    
+    eligible_for_specific_insurance_quote = True
+else:
+    
+    eligible_for_specific_insurance_quote = False
+```","```python
+if pensioner and qualifying_spouse_pension == 0.5 * member_pre_commutation_pension:
+    
+    eligible_for_specific_insurance_quote = True
+else:
+    
+    eligible_for_specific_insurance_quote = False
+```"
+50% of what the member’s pension would have been at the date of death if the member had not exchanged any of his pension for a lump sum or to provide a pension for a dependant,"If the member has not exchanged any of their pension for a lump sum or to provide a pension for a dependant, they will be eligible to receive 50% of what their pension would have been at the date of death.","```python
+if not exchanged_pension:
+    
+    pension_amount = 0.5 * original_pension_amount
+else:
+    
+    # code for other conditions
+```","```python
+if not exchanged_pension:
+    
+    pension_amount = 0.5 * original_pension_amount
+else:
+    
+    # code for other conditions
+```"
+- **Term:** Qualifying Spouse’s Pension - **Status:** Deferred past NRD - **Definition:** 50% of the pension the deferred member would have been entitled to had he or she retired on the day before he or she died,"If the Qualifying Spouse's Pension status is deferred past NRD, then the insurance quote will be adjusted to reflect 50% of the pension the deferred member would have been entitled to had he or she retired on the day before he or she died.","```python
+if Qualifying_Spouse_Pension_status == ""deferred"" and Pension_status == ""past NRD"":
+    
+    insurance_quote_adjustment = 0.5 * deferred_member_pension
+else:
+    
+    insurance_quote_adjustment = 0
+```","```python
+if Qualifying_Spouse_Pension_status == ""deferred"" and Pension_status == ""past NRD"":
+    
+    insurance_quote_adjustment = 0.5 * deferred_member_pension
+else:
+    
+    insurance_quote_adjustment = 0
+```"
+- **Term:** Qualifying Spouse - **Status:** Pensioner/Deferred Past NRD - **Definition:** Spouse of the member who was not divorced or judicially separated from the member and ordinarily resident with the member at the time of the member’s death,"If the spouse of the member is a pensioner/deferred past NRD and was not divorced or judicially separated from the member, and was ordinarily resident with the member at the time of the member's death, then they qualify for an insurance quote.","```python
+if spouse_status == ""pensioner/deferred past NRD"" and not divorced and not judicially_separated and ordinarily_resident:
+    
+    qualify_for_insurance_quote()
+else:
+    
+    do_not_qualify_for_insurance_quote()
+```","```python
+if spouse_status == ""pensioner/deferred past NRD"" and not divorced and not judicially_separated and ordinarily_resident:
+    
+    qualify_for_insurance_quote()
+else:
+    
+    do_not_qualify_for_insurance_quote()
+```"
