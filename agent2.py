@@ -5,7 +5,7 @@ import openai
 import pandas as pd
 import re
 
-rules_address = 'agent1qgut44dptpp9t65mtmjsms3ffj2m8d0e0df290nk0rd2celd7y84ssmevxw'
+rules_address = '###'
 
 class Message(Model):
     message: str
@@ -48,7 +48,7 @@ async def parse_doc(ctx: Context, sender: str, msg: Message):
 
     ctx.logger.info('Converted table to text')
 
-    openai.api_key = 'sk-proj-GRDjhCH5HEgVBCxMYmiVT3BlbkFJEpsCezMzvhKU13Nm6aIm'
+    openai.api_key = '###'
 
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
